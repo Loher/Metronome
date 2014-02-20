@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MetronomeActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10px"
+        android:background="#6666FF"
+        android:orientation="vertical" >
+        
+	        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textSize="150px"
+	        android:textColor="#FFFFFF"
+	        android:id="@+id/tempo"/>
+	            
+	        <SeekBar
+	        android:id="@+id/slider"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10px"/>
+	
+	    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal" >
+		    <Button
+		        android:id="@+id/start"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:onClick="start"
+		        android:text="@string/start" />
+		
+		    <Button
+		        android:id="@+id/stop"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:onClick="stop"
+		        android:text="@string/stop" />
+	    </LinearLayout>
+	
+    </LinearLayout>
+
+</LinearLayout>
