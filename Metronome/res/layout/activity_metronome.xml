@@ -23,28 +23,75 @@
 	        <SeekBar
 	        android:id="@+id/slider"
 	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
+	        android:layout_height="wrap_content" 
 	        android:layout_margin="10px"/>
+	        
 	
-	    <LinearLayout
+	        
+		    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="60px"
+	        android:gravity="center"
+	        android:orientation="horizontal" >
+	        
+ 
+				<ImageView
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:layout_width="wrap_content"
+			    android:src="@drawable/right_arrow"
+			    android:onClick="downMeasure" />
+				
+				<TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:textSize="40px"
+		        android:layout_marginLeft="20px"
+		        android:textColor="#FFFFFF"
+		        android:id="@+id/measure"
+			    android:text="4"/>
+				
+				<ImageView
+			    android:layout_height="wrap_content"
+			    android:layout_width="wrap_content"
+			    android:layout_gravity="center"
+			    android:layout_marginLeft="20px"
+			    android:src="@drawable/left_arrow"
+			    android:onClick="upMeasure" />
+				
+			</LinearLayout>
+	
+	   <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="60px"
+		android:gravity="center"
         android:orientation="horizontal" >
-		    <Button
-		        android:id="@+id/start"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:onClick="start"
-		        android:text="@string/start" />
-		
+				
+		   
 		    <Button
 		        android:id="@+id/stop"
-		        android:layout_width="wrap_content"
+		        android:layout_width="100dp"
 		        android:layout_height="wrap_content"
 		        android:onClick="stop"
+		        android:background="@drawable/button"
+		        android:textColor="#FFFFFF"
+		        android:textStyle="bold"
 		        android:text="@string/stop" />
+		    
+		     <Button
+		        android:id="@+id/start"
+		        android:layout_width="100dp" 
+		        android:layout_height="wrap_content"
+		        android:onClick="start"
+		        android:layout_marginLeft="30px"
+		        android:background="@drawable/button"
+		        android:textColor="#FFFFFF"
+		        android:textStyle="bold"
+		        android:text="@string/start" />
+		     
 	    </LinearLayout>
 	
     </LinearLayout>

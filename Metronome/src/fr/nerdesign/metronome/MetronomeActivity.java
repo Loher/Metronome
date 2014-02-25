@@ -10,7 +10,6 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import fr.nerdesign.metronome.controller.MetronomeController;
-import fr.nerdesign.metronome.model.Horloge;
 
 
 public class MetronomeActivity extends Activity {
@@ -76,6 +75,17 @@ public class MetronomeActivity extends Activity {
 		});
     }
     
+    public void downMeasure(View view){
+    	metronomeController.downMeasure();    }
+    
+    public void upMeasure(View view){
+    	metronomeController.upMeasure();
+    }
+    
+    public void updateMeasureView(int measure){
+    	TextView measureView = (TextView) findViewById(R.id.measure);
+    	measureView.setText(measure + "");
+    }
     
     
 }

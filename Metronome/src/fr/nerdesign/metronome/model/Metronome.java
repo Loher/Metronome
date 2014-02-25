@@ -22,8 +22,17 @@ public class Metronome {
 		return measure;
 	}
 
-	public void setMeasure(int measure) {
-		this.measure = measure;
+	public void upMeasure() {
+		if(this.measure < 8){
+			this.measure++;
+		}
+	}
+	
+	public void downMeasure(){
+		if(this.measure > 2){
+			this.measure--;
+
+		}
 	}
 	
 	
