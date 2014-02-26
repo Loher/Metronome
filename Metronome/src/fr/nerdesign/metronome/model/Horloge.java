@@ -15,31 +15,29 @@ public class Horloge {
 	private int currentBeep = 1;
 	private ToneGenerator beep;
 	private ToneGenerator firstBeep;
+
 	
-	public Horloge(int tempo, int measure){
+	public Horloge(int tempo, int measure, ToneGenerator beep, ToneGenerator firstBeep){
 		
+		this.beep = beep;
+		this.firstBeep = firstBeep;
 		this.measure = measure;
 		timer = new Timer();
-        //toneG = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
-        beep = new ToneGenerator(AudioManager.FLAG_PLAY_SOUND, 100);
-        firstBeep = new ToneGenerator(AudioManager.VIBRATE_TYPE_NOTIFICATION, 100);
-
         
 		TimerTask timerTask = new TimerTask() {
-			
 			@Override
 			public void run() {
 				try {
 					if(currentBeep == 1){
-						firstBeep.startTone(ToneGenerator.TONE_SUP_PIP, 100);
+						Horloge.this.firstBeep.startTone(ToneGenerator.TONE_SUP_DIAL, 100);
 						currentBeep++;
 					}
 					else if(currentBeep == Horloge.this.measure){
-						beep.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 100);
+						Horloge.this.beep.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 100);
 						currentBeep = 1;
 					}
 					else{
-						beep.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 100);
+						Horloge.this.beep.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 100);
 						currentBeep++;
 					}
 					

@@ -27,7 +27,7 @@ public class MetronomeController {
 		if(horloge != null){
 			horloge.stop();
 		}
-		horloge = new Horloge(metronome.getTempo(), metronome.getMeasure());
+		horloge = new Horloge(metronome.getTempo(), metronome.getMeasure(), metronome.getBeep(), metronome.getFirstBeep());
 	}
 	
 	public void stopMetronome(){
@@ -44,7 +44,7 @@ public class MetronomeController {
 		if(horloge != null){
 			horloge.stop();
 		}
-		horloge = new Horloge(metronome.getTempo(), metronome.getMeasure());
+		horloge = new Horloge(metronome.getTempo(), metronome.getMeasure(), metronome.getBeep(), metronome.getFirstBeep());
 	}
 	
 	public void downMeasure(){
@@ -54,7 +54,7 @@ public class MetronomeController {
 		if(horloge != null){
 			horloge.stop();
 		}
-		horloge = new Horloge(metronome.getTempo(), metronome.getMeasure());
+		horloge = new Horloge(metronome.getTempo(), metronome.getMeasure(), metronome.getBeep(), metronome.getFirstBeep());
 	}
 
 	
